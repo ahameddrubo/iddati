@@ -6,19 +6,28 @@
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#0b7a6a" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308796b'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif'%3E%D8%B9%3C/text%3E%3C/svg%3E" />
-  <title>من نحن — عدّتي</title>
-  <meta name="description" content="تعرّف على عدّتي" />
+  <title>من نحن؟ عن منصة عدّتي للأدوات العربية</title>
+  <meta name="description" content="تعرف على عدّتي: منصة عربية مجانية تقدم حاسبات ومحولات عملية للسعودية — التاريخ الهجري، الراتب، الإقامة وغيرها — مع التركيز على الوضوح والخصوصية." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://iddati.pages.dev/about/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="عدّتي" />
   <meta property="og:locale" content="ar_SA" />
   <meta property="og:url" content="https://iddati.pages.dev/about/" />
-  <meta property="og:title" content="من نحن — عدّتي" />
-  <meta property="og:description" content="تعرّف على عدّتي" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="من نحن — عدّتي" />
-  <meta name="twitter:description" content="تعرّف على عدّتي" />
+  <meta property="og:title" content="من نحن؟ عن منصة عدّتي للأدوات العربية" />
+  <meta property="og:description" content="تعرف على عدّتي: منصة عربية مجانية تقدم حاسبات ومحولات عملية للسعودية — التاريخ الهجري، الراتب، الإقامة وغيرها — مع التركيز على الوضوح والخصوصية." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="من نحن؟ عن منصة عدّتي للأدوات العربية" />
+  <meta name="twitter:description" content="تعرف على عدّتي: منصة عربية مجانية تقدم حاسبات ومحولات عملية للسعودية — التاريخ الهجري، الراتب، الإقامة وغيرها — مع التركيز على الوضوح والخصوصية." />
+  <meta property="og:image" content="https://iddati.pages.dev/assets/og/og-default.png" />
+  <meta property="og:image:secure_url" content="https://iddati.pages.dev/assets/og/og-default.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="من نحن؟ عن منصة عدّتي للأدوات العربية" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://iddati.pages.dev/assets/og/og-default.png" />
+  <meta name="twitter:image:alt" content="من نحن؟ عن منصة عدّتي للأدوات العربية" />
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "BreadcrumbList", "inLanguage": "ar", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://iddati.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "من نحن"}]}
   </script>
@@ -470,8 +479,46 @@
     .post-date { color: var(--muted); font-size: .92rem; margin-bottom: 10px; }
     .article-body h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin: 0 0 18px; max-width: 800px; }
     .article-body .prose h2 { margin-top: 30px; }
-    .blog-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
-    @media (max-width: 640px) { .blog-grid { grid-template-columns: 1fr; } }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
+    .article-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 26px 24px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .article-card::before {
+      content: ""; position: absolute; inset-inline: 0; top: 0; height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+    .article-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(8,127,111,.16); border-color: var(--primary); }
+    .article-meta { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); }
+    .article-meta .dot { opacity: .6; }
+    .article-card h3 { font-size: 1.12rem; margin: 0; line-height: 1.8; }
+    .article-card h3 a { color: inherit; text-decoration: none; }
+    .article-card h3 a:hover { color: var(--primary); }
+    .article-card > p { margin: 0; color: var(--muted); font-size: .94rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .article-more { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-weight: 700; font-size: .92rem; }
+    .article-more:hover { color: var(--primary-hover); }
+    /* ==== 404 ==== */
+    .not-found { text-align: center; padding: 70px 0; max-width: 560px; margin: 0 auto; }
+    .not-found .code { font-size: clamp(4rem, 12vw, 7rem); font-weight: 800; color: var(--primary); line-height: 1; }
+    .not-found h1 { font-size: 1.6rem; margin: 16px 0 10px; }
+    .not-found p { color: var(--muted); margin-bottom: 26px; }
+    .not-found .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    /* ==== E-E-A-T trust box (audit P1) ==== */
+    .trust-box { margin-top: 30px; background: var(--surface-soft); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 22px 24px; font-size: .93rem; }
+    .trust-box h3 { font-size: 1rem; margin: 0 0 10px; }
+    .trust-box p, .trust-box li { color: var(--muted); }
+    .trust-box ul { margin: 8px 0; padding-inline-start: 20px; }
+    .trust-box .sources { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); }
+    .post-meta { color: var(--muted); font-size: .9rem; margin-bottom: 14px; }
 
   </style>
 </head>
@@ -498,19 +545,26 @@
     <section class="page active">
       <div class="container section">
         <h1>من نحن</h1>
-        <p class="page-sub">تعرّف على عدّتي</p>
+        <p class="page-sub">تعرف على عدّتي: منصة عربية مجانية تقدم حاسبات ومحولات عملية للسعودية — التاريخ الهجري، الراتب، الإقامة وغيرها — مع التركيز على الوضوح والخصوصية.</p>
         <div class="prose">
-          <p>عدّتي (iddati.com) موقع عربي مجاني يقدم أدوات عملية بسيطة للحياة اليومية في السعودية — مثل تحويل التاريخ الهجري وحساب رسوم الإقامة — بدون تسجيل وبدون تعقيد.</p>
+          <p>عدّتي (iddati.com) منصة عربية مجانية صُممت لتبسيط الحسابات اليومية في السعودية: من تحويل التاريخ الهجري إلى حساب صافي الراتب ورسوم الإقامة — كل ذلك بالعربية، وبدون تسجيل، وبدون تعقيد.</p>
           <h2>مهمتنا</h2>
-          <p>اختصار البحث والخطوات المعقدة: أداة واحدة، نتيجة فورية، وتصميم واضح بالعربية.</p>
+          <p>اختصار البحث والخطوات المعقدة: أداة واحدة، نتيجة فورية، وتصميم واضح بالعربية. نؤمن أن المعلومة الدقيقة حق للجميع، وأن الخصوصية ليست ميزة إضافية بل أساس.</p>
           <h2>ماذا نقدم؟</h2>
           <ul>
             <li><a href="/hijri-converter/">محول التاريخ الهجري</a> بتقويم أم القرى</li>
             <li><a href="/iqama-calculator/">حاسبة رسوم الإقامة</a> والمرافقين</li>
-            <li>المزيد من الأدوات قريبًا</li>
+            <li><a href="/salary-calculator/">حاسبة الراتب السعودي</a> بعد خصم التأمينات</li>
+            <li><a href="/end-of-service/">حاسبة مكافأة نهاية الخدمة</a> حسب نظام العمل</li>
+            <li><a href="/age-calculator/">حاسبة العمر</a> الدقيق</li>
+            <li><a href="/percentage-calculator/">حاسبة النسبة المئوية</a> والخصومات</li>
+            <li><a href="/unit-converter/">محول الوحدات</a></li>
+            <li><a href="/bmi-calculator/">حاسبة مؤشر كتلة الجسم</a></li>
           </ul>
+          <h2>دقة المحتوى</h2>
+          <p>نبني حساباتنا على الأنظمة واللوائح السعودية المعلنة (كنظام العمل والتأمينات الاجتماعية)، ونراجع الأرقام دوريًا. مع ذلك، الأدوات للاسترشاد ولا تغني عن المرجع الرسمي أو الاستشارة المختصة — راجع <a href="/contact/">تواصل معنا</a> للإبلاغ عن أي خطأ وسنصححه.</p>
           <h2>الخصوصية أولًا</h2>
-          <p>جميع الحسابات تتم على جهازك. لا نجمع بياناتك ولا نطلب منك إنشاء حساب. راجع <a href="/privacy-policy/">سياسة الخصوصية</a>.</p>
+          <p>جميع الحسابات تتم على جهازك داخل المتصفح. لا نجمع بياناتك ولا نطلب منك إنشاء حساب. راجع <a href="/privacy-policy/">سياسة الخصوصية</a> للتفاصيل.</p>
         </div>
       </div>
     </section>

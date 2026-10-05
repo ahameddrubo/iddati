@@ -6,19 +6,28 @@
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#0b7a6a" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308796b'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif'%3E%D8%B9%3C/text%3E%3C/svg%3E" />
-  <title>اتصل بنا — عدّتي</title>
-  <meta name="description" content="نسعد بتواصلك معنا" />
+  <title>اتصل بنا — تواصل مع فريق عدّتي</title>
+  <meta name="description" content="تواصل مع فريق عدّتي: أبلغ عن خطأ في نتيجة، اقترح أداة جديدة، أو أرسل ملاحظاتك — نرد خلال يومي عمل." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://iddati.pages.dev/contact/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="عدّتي" />
   <meta property="og:locale" content="ar_SA" />
   <meta property="og:url" content="https://iddati.pages.dev/contact/" />
-  <meta property="og:title" content="اتصل بنا — عدّتي" />
-  <meta property="og:description" content="نسعد بتواصلك معنا" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="اتصل بنا — عدّتي" />
-  <meta name="twitter:description" content="نسعد بتواصلك معنا" />
+  <meta property="og:title" content="اتصل بنا — تواصل مع فريق عدّتي" />
+  <meta property="og:description" content="تواصل مع فريق عدّتي: أبلغ عن خطأ في نتيجة، اقترح أداة جديدة، أو أرسل ملاحظاتك — نرد خلال يومي عمل." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="اتصل بنا — تواصل مع فريق عدّتي" />
+  <meta name="twitter:description" content="تواصل مع فريق عدّتي: أبلغ عن خطأ في نتيجة، اقترح أداة جديدة، أو أرسل ملاحظاتك — نرد خلال يومي عمل." />
+  <meta property="og:image" content="https://iddati.pages.dev/assets/og/og-default.png" />
+  <meta property="og:image:secure_url" content="https://iddati.pages.dev/assets/og/og-default.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="اتصل بنا — تواصل مع فريق عدّتي" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://iddati.pages.dev/assets/og/og-default.png" />
+  <meta name="twitter:image:alt" content="اتصل بنا — تواصل مع فريق عدّتي" />
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "BreadcrumbList", "inLanguage": "ar", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://iddati.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "اتصل بنا"}]}
   </script>
@@ -450,8 +459,9 @@
     .page-sub { color: var(--muted); margin-top: -6px; }
     .riyal-mark { font-weight: 700; color: var(--primary); font-size: 1.05rem; }
     /* ==== centered hero with search ==== */
+    .home-hero.hero-centered { display: block; }
     .hero-centered { text-align: center; }
-    .hero-centered .hero-copy { max-width: 660px; margin-inline: auto; }
+    .hero-centered .hero-copy { max-width: 660px; margin: 0 auto; text-align: center; }
     .hero-search { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px; padding-inline-start: 20px; max-width: 520px; margin: 28px auto 0; box-shadow: var(--shadow-sm); transition: border-color .2s, box-shadow .2s; }
     .hero-search svg { color: var(--muted); flex-shrink: 0; }
     .hero-search input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; padding: 10px 0; color: var(--text); }
@@ -463,6 +473,52 @@
     .hero-stat strong { font-family: "Noto Kufi Arabic", sans-serif; font-size: 1.5rem; color: var(--primary); }
     .hero-stat span { color: var(--muted); font-size: .85rem; }
     .no-results { display: none; grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 24px 0; }
+    /* ==== footer nav must wrap (11 links) to prevent horizontal overflow ==== */
+    .footer-nav { flex-wrap: wrap; row-gap: 10px; }
+    /* ==== blog ==== */
+    .post-date { color: var(--muted); font-size: .92rem; margin-bottom: 10px; }
+    .article-body h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin: 0 0 18px; max-width: 800px; }
+    .article-body .prose h2 { margin-top: 30px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
+    .article-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 26px 24px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .article-card::before {
+      content: ""; position: absolute; inset-inline: 0; top: 0; height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+    .article-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(8,127,111,.16); border-color: var(--primary); }
+    .article-meta { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); }
+    .article-meta .dot { opacity: .6; }
+    .article-card h3 { font-size: 1.12rem; margin: 0; line-height: 1.8; }
+    .article-card h3 a { color: inherit; text-decoration: none; }
+    .article-card h3 a:hover { color: var(--primary); }
+    .article-card > p { margin: 0; color: var(--muted); font-size: .94rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .article-more { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-weight: 700; font-size: .92rem; }
+    .article-more:hover { color: var(--primary-hover); }
+    /* ==== 404 ==== */
+    .not-found { text-align: center; padding: 70px 0; max-width: 560px; margin: 0 auto; }
+    .not-found .code { font-size: clamp(4rem, 12vw, 7rem); font-weight: 800; color: var(--primary); line-height: 1; }
+    .not-found h1 { font-size: 1.6rem; margin: 16px 0 10px; }
+    .not-found p { color: var(--muted); margin-bottom: 26px; }
+    .not-found .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    /* ==== E-E-A-T trust box (audit P1) ==== */
+    .trust-box { margin-top: 30px; background: var(--surface-soft); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 22px 24px; font-size: .93rem; }
+    .trust-box h3 { font-size: 1rem; margin: 0 0 10px; }
+    .trust-box p, .trust-box li { color: var(--muted); }
+    .trust-box ul { margin: 8px 0; padding-inline-start: 20px; }
+    .trust-box .sources { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line); }
+    .post-meta { color: var(--muted); font-size: .9rem; margin-bottom: 14px; }
 
   </style>
 </head>
@@ -480,6 +536,7 @@
         <a class="nav-link" href="/">الرئيسية</a>
         <a class="nav-link" href="/hijri-converter/">محول التاريخ الهجري</a>
         <a class="nav-link" href="/iqama-calculator/">حاسبة رسوم الإقامة</a>
+        <a class="nav-link" href="/blog/">المدونة</a>
         <a class="nav-link" href="/about/">من نحن</a>
       </nav>
     </div>
@@ -488,18 +545,23 @@
     <section class="page active">
       <div class="container section">
         <h1>اتصل بنا</h1>
-        <p class="page-sub">نسعد بتواصلك معنا</p>
+        <p class="page-sub">تواصل مع فريق عدّتي: أبلغ عن خطأ في نتيجة، اقترح أداة جديدة، أو أرسل ملاحظاتك — نرد خلال يومي عمل.</p>
         <div class="prose">
-          <p>سواء كان لديك اقتراح لأداة جديدة، أو وجدت خطأً في إحدى الأدوات، أو أي استفسار آخر — راسلنا وسنرد عليك.</p>
+          <p>نسعد بتواصلك معنا. راسلنا في أي من الحالات التالية:</p>
+          <ul>
+            <li>وجدت خطأً في نتيجة إحدى الأدوات أو المقالات</li>
+            <li>لديك اقتراح لأداة جديدة تخدمك</li>
+            <li>استفسار حول الخصوصية أو المحتوى</li>
+          </ul>
           <p><a class="btn btn-primary" href="mailto:amdadulhoqueai@gmail.com">amdadulhoqueai@gmail.com</a></p>
-          <p>نحاول الرد خلال يومين عمل.</p>
+          <p>نحاول الرد خلال يومي عمل. عند الإبلاغ عن خطأ، اذكر اسم الأداة والقيم التي أدخلتها لنتمكن من التحقق سريعًا.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
+    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><a href="/blog/">المدونة</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
   </footer>
   <script>
     (function () {
