@@ -450,8 +450,9 @@
     .page-sub { color: var(--muted); margin-top: -6px; }
     .riyal-mark { font-weight: 700; color: var(--primary); font-size: 1.05rem; }
     /* ==== centered hero with search ==== */
+    .home-hero.hero-centered { display: block; }
     .hero-centered { text-align: center; }
-    .hero-centered .hero-copy { max-width: 660px; margin-inline: auto; }
+    .hero-centered .hero-copy { max-width: 660px; margin: 0 auto; text-align: center; }
     .hero-search { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px; padding-inline-start: 20px; max-width: 520px; margin: 28px auto 0; box-shadow: var(--shadow-sm); transition: border-color .2s, box-shadow .2s; }
     .hero-search svg { color: var(--muted); flex-shrink: 0; }
     .hero-search input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; padding: 10px 0; color: var(--text); }
@@ -463,6 +464,14 @@
     .hero-stat strong { font-family: "Noto Kufi Arabic", sans-serif; font-size: 1.5rem; color: var(--primary); }
     .hero-stat span { color: var(--muted); font-size: .85rem; }
     .no-results { display: none; grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 24px 0; }
+    /* ==== footer nav must wrap (11 links) to prevent horizontal overflow ==== */
+    .footer-nav { flex-wrap: wrap; row-gap: 10px; }
+    /* ==== blog ==== */
+    .post-date { color: var(--muted); font-size: .92rem; margin-bottom: 10px; }
+    .article-body h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin: 0 0 18px; max-width: 800px; }
+    .article-body .prose h2 { margin-top: 30px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    @media (max-width: 640px) { .blog-grid { grid-template-columns: 1fr; } }
 
   </style>
 </head>
@@ -480,6 +489,7 @@
         <a class="nav-link" href="/">الرئيسية</a>
         <a class="nav-link" href="/hijri-converter/">محول التاريخ الهجري</a>
         <a class="nav-link" href="/iqama-calculator/">حاسبة رسوم الإقامة</a>
+        <a class="nav-link" href="/blog/">المدونة</a>
         <a class="nav-link" href="/about/" aria-current="page">من نحن</a>
       </nav>
     </div>
@@ -507,7 +517,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
+    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><a href="/blog/">المدونة</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
   </footer>
   <script>
     (function () {
