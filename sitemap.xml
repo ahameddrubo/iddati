@@ -2,62 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://iddati.pages.dev/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/hijri-converter/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/iqama-calculator/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/salary-calculator/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/end-of-service/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/age-calculator/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/percentage-calculator/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/unit-converter/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/bmi-calculator/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/how-to-calculate-end-of-service/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/gosi-deduction-from-salary/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/how-to-know-hijri-date-today/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/iqama-renewal-fees-saudi/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/how-to-calculate-age-accurately/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/how-to-calculate-discount-percentage/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/mile-to-kilometer-conversion/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/what-is-healthy-bmi/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/how-to-calculate-hijri-age/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/ideal-weight-by-height/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/percentage-of-school-grades/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://iddati.pages.dev/blog/how-to-calculate-retirement-salary/</loc>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/about/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/privacy-policy/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://iddati.pages.dev/contact/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-10-05</lastmod>
   </url>
 </urlset>
