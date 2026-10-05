@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iddati.pages.dev/sitemap.xml
