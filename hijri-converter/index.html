@@ -24,7 +24,9 @@
   {"@context": "https://schema.org", "@type": "BreadcrumbList", "inLanguage": "ar", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://iddati.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "محول التاريخ الهجري"}]}
   </script>
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ar", "mainEntity": [{"@type": "Question", "name": "كيف أحوّل التاريخ الميلادي إلى هجري؟", "acceptedAnswer": {"@type": "Answer", "text": "اختر «ميلادي ← هجري»، أدخل التاريخ الميلادي، ثم اضغط «تحويل التاريخ» وستظهر النتيجة بالصيغة العربية مع اسم اليوم."}},
+  {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ar", "mainEntity": [{"@type": "Question", "name": "هل يدعم المحول أسماء الأشهر الهجرية؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، تعرض النتيجة اسم الشهر الهجري بالعربية مع السنة، مثل: ٢٤ ربيع الآخر ١٤٤٨ هـ."}},
+{"@type": "Question", "name": "هل يمكن تحويل تاريخ مستقبلي؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، يعمل التحويل لأي تاريخ تدخله — ماضيًا أو مستقبليًا — في الاتجاهين."}},
+{"@type": "Question", "name": "كيف أحوّل التاريخ الميلادي إلى هجري؟", "acceptedAnswer": {"@type": "Answer", "text": "اختر «ميلادي ← هجري»، أدخل التاريخ الميلادي، ثم اضغط «تحويل التاريخ» وستظهر النتيجة بالصيغة العربية مع اسم اليوم."}},
 {"@type": "Question", "name": "هل يمكن التحويل من هجري إلى ميلادي؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، اختر «هجري ← ميلادي» وأدخل اليوم والشهر والسنة الهجرية لتحصل على المقابل الميلادي."}},
 {"@type": "Question", "name": "لماذا قد يختلف التاريخ يومًا واحدًا؟", "acceptedAnswer": {"@type": "Answer", "text": "قد يختلف التاريخ الهجري يومًا واحدًا بحسب ثبوت رؤية الهلال والجهة المعتمدة، خصوصًا في الأشهر المرتبطة بالمناسبات الدينية."}},
 {"@type": "Question", "name": "ما هو تقويم أم القرى؟", "acceptedAnswer": {"@type": "Answer", "text": "تقويم أم القرى هو التقويم الهجري الرسمي المعتمد في المملكة العربية السعودية، ويعتمد على الحسابات الفلكية الدقيقة."}}]}
@@ -463,6 +465,20 @@
     .cta-box p { color: var(--muted); margin: 4px 0 0; }
     .page-sub { color: var(--muted); margin-top: -6px; }
     .riyal-mark { font-weight: 700; color: var(--primary); font-size: 1.05rem; }
+    /* ==== centered hero with search ==== */
+    .hero-centered { text-align: center; }
+    .hero-centered .hero-copy { max-width: 660px; margin-inline: auto; }
+    .hero-search { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px; padding-inline-start: 20px; max-width: 520px; margin: 28px auto 0; box-shadow: var(--shadow-sm); transition: border-color .2s, box-shadow .2s; }
+    .hero-search svg { color: var(--muted); flex-shrink: 0; }
+    .hero-search input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; padding: 10px 0; color: var(--text); }
+    .hero-search input:focus { outline: none; }
+    .hero-search input::placeholder { color: var(--muted); }
+    .hero-search:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+    .hero-stats { display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap; }
+    .hero-stat { display: flex; flex-direction: column; gap: 2px; }
+    .hero-stat strong { font-family: "Noto Kufi Arabic", sans-serif; font-size: 1.5rem; color: var(--primary); }
+    .hero-stat span { color: var(--muted); font-size: .85rem; }
+    .no-results { display: none; grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 24px 0; }
 
   </style>
 </head>
@@ -530,6 +546,8 @@
         </div>
         <h2 style="margin-top:34px">أسئلة شائعة</h2>
 <div class="faq">
+      <details><summary>هل يدعم المحول أسماء الأشهر الهجرية؟</summary><p>نعم، تعرض النتيجة اسم الشهر الهجري بالعربية مع السنة، مثل: ٢٤ ربيع الآخر ١٤٤٨ هـ.</p></details>
+      <details><summary>هل يمكن تحويل تاريخ مستقبلي؟</summary><p>نعم، يعمل التحويل لأي تاريخ تدخله — ماضيًا أو مستقبليًا — في الاتجاهين.</p></details>
       <details><summary>كيف أحوّل التاريخ الميلادي إلى هجري؟</summary><p>اختر «ميلادي ← هجري»، أدخل التاريخ الميلادي، ثم اضغط «تحويل التاريخ» وستظهر النتيجة بالصيغة العربية مع اسم اليوم.</p></details>
       <details><summary>هل يمكن التحويل من هجري إلى ميلادي؟</summary><p>نعم، اختر «هجري ← ميلادي» وأدخل اليوم والشهر والسنة الهجرية لتحصل على المقابل الميلادي.</p></details>
       <details><summary>لماذا قد يختلف التاريخ يومًا واحدًا؟</summary><p>قد يختلف التاريخ الهجري يومًا واحدًا بحسب ثبوت رؤية الهلال والجهة المعتمدة، خصوصًا في الأشهر المرتبطة بالمناسبات الدينية.</p></details>
@@ -543,7 +561,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
+    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
   </footer>
   <script>
     (function () {
