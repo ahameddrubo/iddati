@@ -477,6 +477,15 @@
     .cta-box p { color: var(--muted); margin: 4px 0 0; }
     .page-sub { color: var(--muted); margin-top: -6px; }
     .riyal-mark { font-weight: 700; color: var(--primary); font-size: 1.05rem; }
+    /* ==== multi-tool hero visual ==== */
+    .toolbox { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; width: min(360px, 100%); }
+    .mini-tool-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow); padding: 20px 12px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; font-weight: 700; font-size: .88rem; line-height: 1.5; transition: transform .2s ease; }
+    a.mini-tool-card:hover { transform: translateY(-4px); }
+    .mini-tool-card:nth-child(2) { transform: translateY(16px); }
+    a.mini-tool-card:nth-child(2):hover { transform: translateY(12px); }
+    .mini-tool-card.soon { grid-column: 1 / -1; border-style: dashed; box-shadow: none; background: transparent; color: var(--muted); font-weight: 600; flex-direction: row; justify-content: center; padding: 14px 12px; }
+    .mini-tool-icon { width: 48px; height: 48px; border-radius: 15px; background: var(--primary-soft); color: var(--primary); display: grid; place-items: center; flex-shrink: 0; }
+    .mini-tool-card.soon .mini-tool-icon { background: transparent; border: 1.5px dashed var(--line); color: var(--muted); font-size: 1.4rem; font-weight: 400; }
 
   </style>
 </head>
@@ -513,22 +522,22 @@
             <button class="btn btn-secondary" data-scroll="tools">تصفح الأدوات</button>
           </div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit">
-            <div class="float-chip one">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 3v3m10-3v3M4 9h16M6.5 5h11A2.5 2.5 0 0 1 20 7.5v10A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-10A2.5 2.5 0 0 1 6.5 5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-              هجري وأم القرى
-            </div>
-            <div class="calendar-sheet">
-              <div class="calendar-top"><b>ذو القعدة</b><span>١٤٤٧</span></div>
-              <div class="calendar-body"><div class="calendar-day">١٨</div><div class="calendar-month">الثلاثاء</div></div>
-            </div>
-            <div class="float-chip two">
-              <span class="riyal-mark">ر.س</span>
-              المجموع بالريال
-            </div>
-          </div>
+        <div class="hero-art">
+      <div class="toolbox">
+        <a class="mini-tool-card" href="/hijri-converter/">
+          <span class="mini-tool-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3v3m10-3v3M4 9h16M6.5 5h11A2.5 2.5 0 0 1 20 7.5v10A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-10A2.5 2.5 0 0 1 6.5 5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m9 14 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span>محول التاريخ الهجري</span>
+        </a>
+        <a class="mini-tool-card" href="/iqama-calculator/">
+          <span class="mini-tool-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 4h11A2.5 2.5 0 0 1 20 6.5v11A2.5 2.5 0 0 1 4 17.5v-11A2.5 2.5 0 0 1 6.5 4Z" stroke="currentColor" stroke-width="1.8"/><path d="M8 8h8M8 12h2m4 0h2m-8 4h2m4 0h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <span>حاسبة رسوم الإقامة</span>
+        </a>
+        <div class="mini-tool-card soon">
+          <span class="mini-tool-icon">+</span>
+          <span>المزيد من الأدوات قريبًا</span>
         </div>
+      </div>
+    </div>
       </div>
 
       <div class="container section" id="tools">
