@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0b7a6a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308796b'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif'%3E%D8%B9%3C/text%3E%3C/svg%3E" />
+  <title>حاسبة النسبة المئوية | احسب النسب والخصومات والتغير — عدّتي</title>
+  <meta name="description" content="احسب النسبة المئوية من أي مبلغ أو التغير المئوي بين قيمتين للخصومات والضرائب. حاسبة عربية مجانية بدون تسجيل." />
+  <meta name="keywords" content="حاسبة النسبة المئوية, حساب النسبة, نسبة الخصم, التغير المئوي" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://iddati.pages.dev/percentage-calculator/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="عدّتي" />
+  <meta property="og:locale" content="ar_SA" />
+  <meta property="og:url" content="https://iddati.pages.dev/percentage-calculator/" />
+  <meta property="og:title" content="حاسبة النسبة المئوية | احسب النسب والخصومات والتغير — عدّتي" />
+  <meta property="og:description" content="احسب النسبة المئوية من أي مبلغ أو التغير المئوي بين قيمتين للخصومات والضرائب. حاسبة عربية مجانية بدون تسجيل." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="حاسبة النسبة المئوية | احسب النسب والخصومات والتغير — عدّتي" />
+  <meta name="twitter:description" content="احسب النسبة المئوية من أي مبلغ أو التغير المئوي بين قيمتين للخصومات والضرائب. حاسبة عربية مجانية بدون تسجيل." />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "inLanguage": "ar", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://iddati.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "حاسبة النسبة المئوية"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ar", "mainEntity": [{"@type": "Question", "name": "كيف أحسب 15% من مبلغ 200؟", "acceptedAnswer": {"@type": "Answer", "text": "اختر «نسبة من مبلغ»، أدخل 15 في النسبة و200 في المبلغ — النتيجة 30."}},
+{"@type": "Question", "name": "كيف أحسب نسبة الخصم على سلعة؟", "acceptedAnswer": {"@type": "Answer", "text": "استخدم «التغير المئوي»: أدخل السعر الأصلي ثم سعر الخصم، وستظهر نسبة الانخفاض."}},
+{"@type": "Question", "name": "ماذا تعني النسبة السالبة في التغير المئوي؟", "acceptedAnswer": {"@type": "Answer", "text": "تعني أن القيمة الجديدة أقل من الأصلية — أي انخفاض بنسبة معروضة."}},
+{"@type": "Question", "name": "هل تدعم الحاسبة النسب العشرية؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، يمكنك إدخال نسب مثل 12.5% أو 7.25% بدقة."}},
+{"@type": "Question", "name": "أين تُستخدم النسبة المئوية عمليًا؟", "acceptedAnswer": {"@type": "Answer", "text": "في الخصومات التجارية، وضريبة القيمة المضافة، والعمولات، ونسب الإنجاز والزيادات السنوية."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "حاسبة النسبة المئوية",
+   "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web", "inLanguage": "ar",
+   "url": "https://iddati.pages.dev/percentage-calculator/",
+   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "SAR"},
+   "description": "احسب النسبة المئوية من مبلغ أو التغير المئوي بين قيمتين، مجانًا وبدون تسجيل."}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4f8f6;
+      --surface: #ffffff;
+      --surface-soft: #eaf4f0;
+      --surface-strong: #d9ece5;
+      --text: #102924;
+      --muted: #526861;
+      --line: #cbdcd6;
+      --primary: #087f6f;
+      --primary-hover: #07695d;
+      --primary-soft: #dff1eb;
+      --accent: #d8a633;
+      --accent-soft: #fff4d7;
+      --danger: #b74242;
+      --shadow: 0 18px 55px rgba(18, 68, 57, .10);
+      --shadow-sm: 0 7px 24px rgba(18, 68, 57, .08);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #071c18;
+        --surface: #0d2a24;
+        --surface-soft: #11362f;
+        --surface-strong: #16463c;
+        --text: #eefbf6;
+        --muted: #b0c9c1;
+        --line: #26574c;
+        --primary: #4bd0b5;
+        --primary-hover: #73ddc7;
+        --primary-soft: #143e35;
+        --accent: #efc568;
+        --accent-soft: #3f3419;
+        --danger: #ff8a8a;
+        --shadow: 0 20px 60px rgba(0, 0, 0, .28);
+        --shadow-sm: 0 8px 28px rgba(0, 0, 0, .22);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 280px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "IBM Plex Sans Arabic", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+    button, input, select { font: inherit; }
+    button { color: inherit; }
+    a { color: inherit; text-decoration: none; }
+    svg { display: block; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 20;
+      background: color-mix(in srgb, var(--bg) 90%, transparent);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+    }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 6px; }
+    .nav-link {
+      border: 0;
+      background: transparent;
+      border-radius: 10px;
+      padding: 9px 13px;
+      cursor: pointer;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .nav-link:hover, .nav-link[aria-current="page"] { background: var(--surface-soft); color: var(--text); }
+    .nav-tools {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    .nav-tools svg { color: var(--primary); }
+    .mobile-menu-btn { display: none; border: 0; background: transparent; padding: 8px; cursor: pointer; }
+    .page { display: none; }
+    .page.active { display: block; }
+    .home-hero {
+      padding: 84px 0 48px;
+      display: grid;
+      grid-template-columns: 1.18fr .82fr;
+      align-items: center;
+      gap: 58px;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .hero-kicker::before {
+      content: "";
+      width: 32px;
+      height: 3px;
+      border-radius: 9px;
+      background: var(--accent);
+    }
+    h1, h2, h3 { font-family: "Noto Kufi Arabic", sans-serif; margin-block: 0; line-height: 1.45; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.85rem); letter-spacing: -.045em; max-width: 780px; }
+    .hero-copy p { margin: 22px 0 30px; max-width: 650px; font-size: clamp(1.05rem, 1.7vw, 1.25rem); color: var(--muted); }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .btn {
+      min-height: 48px;
+      border: 1px solid transparent;
+      border-radius: 13px;
+      padding: 10px 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    @media (prefers-color-scheme: dark) { .btn-primary { color: #05251f; } }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary { background: var(--surface); border-color: var(--line); color: var(--text); }
+    .btn-secondary:hover { background: var(--surface-soft); }
+    .hero-art {
+      min-height: 400px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+    .orbit {
+      width: min(390px, 100%);
+      aspect-ratio: 1;
+      border: 1px dashed var(--line);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+    .orbit::before {
+      content: "";
+      position: absolute;
+      inset: 14%;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+    }
+    .calendar-sheet {
+      width: 210px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      border-radius: 24px 24px 18px 18px;
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+      transform: rotate(-3deg);
+    }
+    .calendar-top { background: var(--primary); color: #fff; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; }
+    .calendar-top b { font-family: "Noto Kufi Arabic"; }
+    .calendar-body { padding: 25px 24px 27px; text-align: center; }
+    .calendar-day { font-family: "Noto Kufi Arabic"; font-size: 4.7rem; line-height: 1; color: var(--text); }
+    .calendar-month { color: var(--muted); margin-top: 10px; }
+    .float-chip {
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      border-radius: 14px;
+      padding: 10px 13px;
+      font-weight: 600;
+      font-size: .9rem;
+    }
+    .float-chip svg { color: var(--primary); }
+    .float-chip.one { inset-block-start: 35px; inset-inline-start: 0; }
+    .float-chip.two { inset-block-end: 44px; inset-inline-end: -4px; }
+    .section { padding: 64px 0 88px; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+    .section-heading h2 { font-size: clamp(1.55rem, 3vw, 2.3rem); }
+    .section-heading p { max-width: 500px; margin: 8px 0 0; color: var(--muted); }
+    .section-count { color: var(--primary); font-weight: 700; white-space: nowrap; }
+    .tool-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .tool-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      border-radius: var(--radius-lg);
+      min-height: 295px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+    .tool-card::after {
+      content: "";
+      position: absolute;
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      inset-inline-end: -52px;
+      inset-block-end: -60px;
+      background: var(--primary-soft);
+    }
+    .tool-card:nth-child(2)::after { background: var(--accent-soft); }
+    .tool-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      margin-bottom: 24px;
+    }
+    .tool-card:nth-child(2) .tool-icon { background: var(--accent-soft); color: var(--accent); }
+    .tool-card h3 { font-size: 1.2rem; }
+    .tool-card p { margin: 10px 0 24px; color: var(--muted); max-width: 480px; }
+    .tool-launch {
+      border: 0;
+      background: transparent;
+      color: var(--primary);
+      font-weight: 700;
+      padding: 5px 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      position: relative;
+      z-index: 2;
+    }
+    .tool-launch svg { transition: transform .2s; }
+    .tool-launch:hover svg { transform: translateX(-4px); }
+    .promise-strip {
+      margin-top: 24px;
+      background: var(--surface-soft);
+      border-radius: var(--radius-md);
+      padding: 21px 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .promise { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .promise svg { flex: 0 0 auto; color: var(--primary); }
+    .promise strong { display: block; }
+    .promise span { color: var(--muted); font-size: .9rem; }
+    .tool-page-shell { padding: 42px 0 92px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: .93rem; margin-bottom: 26px; }
+    .breadcrumb button { border: 0; background: transparent; color: var(--primary); cursor: pointer; padding: 0; }
+    .tool-page-header { max-width: 800px; margin-bottom: 28px; }
+    .tool-page-header h1 { font-size: clamp(2rem, 4vw, 3.3rem); }
+    .tool-page-header p { color: var(--muted); font-size: 1.08rem; margin: 12px 0 0; }
+    .workspace-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; align-items: start; }
+    .calculator-panel, .info-panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+    .calculator-panel { border-radius: var(--radius-lg); overflow: hidden; }
+    .panel-head { padding: 22px 26px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .panel-head h2 { font-size: 1.1rem; }
+    .status-mark { color: var(--primary); background: var(--primary-soft); border-radius: 999px; padding: 4px 10px; font-size: .83rem; font-weight: 700; }
+    .panel-body { padding: 28px; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .field { display: grid; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-weight: 600; font-size: .95rem; }
+    .field small { color: var(--muted); line-height: 1.45; }
+    input, select {
+      width: 100%;
+      min-height: 50px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg);
+      color: var(--text);
+      padding: 10px 13px;
+      outline: none;
+    }
+    input:focus, select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 20%, transparent); }
+    .segmented { display: inline-grid; grid-template-columns: 1fr 1fr; background: var(--surface-soft); border-radius: 12px; padding: 4px; }
+    .segmented button { min-height: 40px; border: 0; border-radius: 9px; background: transparent; color: var(--muted); padding: 7px 16px; cursor: pointer; font-weight: 700; }
+    .segmented button.active { background: var(--surface); color: var(--text); box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+    .form-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .result-box {
+      margin-top: 26px;
+      background: var(--surface-soft);
+      border-radius: 16px;
+      padding: 22px;
+      display: none;
+    }
+    .result-box.visible { display: block; }
+    .result-label { color: var(--muted); font-size: .9rem; }
+    .result-main { font-family: "Noto Kufi Arabic"; font-size: clamp(1.45rem, 3vw, 2.15rem); margin: 5px 0 4px; }
+    .result-sub { color: var(--muted); }
+    .error-text { color: var(--danger); margin-top: 12px; display: none; }
+    .error-text.visible { display: block; }
+    .info-panel { border-radius: var(--radius-md); padding: 24px; }
+    .info-panel h3 { font-size: 1rem; margin-bottom: 16px; }
+    .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 17px; counter-reset: step; }
+    .steps li { position: relative; padding-inline-start: 42px; color: var(--muted); }
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step, arabic-indic);
+      position: absolute;
+      inset-inline-start: 0;
+      inset-block-start: 2px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+    .note { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+    .breakdown { display: grid; gap: 10px; margin-top: 18px; }
+    .break-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px dashed var(--line); padding-bottom: 9px; }
+    .break-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .break-row span { color: var(--muted); }
+    .break-row strong { white-space: nowrap; }
+    .site-footer { border-top: 1px solid var(--line); padding: 28px 0 calc(28px + env(safe-area-inset-bottom)); color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: .92rem; }
+    .footer-nav { display: flex; gap: 16px; }
+    .footer-nav button { border: 0; background: transparent; color: var(--muted); cursor: pointer; padding: 0; }
+    .footer-nav button:hover { color: var(--primary); }
+    @media (max-width: 860px) {
+      .home-hero { grid-template-columns: 1fr; padding-top: 58px; gap: 24px; }
+      .hero-art { min-height: 350px; }
+      .workspace-grid { grid-template-columns: 1fr; }
+      .info-panel { order: -1; }
+      .promise-strip { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, 1160px); }
+      .site-header { position: relative; }
+      .nav { min-height: 64px; }
+      .nav-tools span { display: none; }
+      .nav-tools::after { content: "عدّتي"; font-family: "Noto Kufi Arabic", sans-serif; color: var(--text); font-weight: 700; }
+      .mobile-menu-btn { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        inset-block-start: 63px;
+        inset-inline: 14px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        border-radius: 14px;
+        padding: 8px;
+        align-items: stretch;
+      }
+      .nav-links.open { display: grid; }
+      .nav-link { text-align: right; }
+      h1 { font-size: clamp(2.2rem, 12vw, 3.5rem); }
+      .home-hero { padding-top: 46px; }
+      .hero-copy p { margin-top: 16px; }
+      .hero-actions { align-items: stretch; }
+      .hero-actions .btn { width: 100%; }
+      .hero-art { min-height: 320px; }
+      .orbit { width: 300px; }
+      .calendar-sheet { width: 175px; }
+      .calendar-top { padding: 14px 17px; }
+      .calendar-body { padding: 21px; }
+      .calendar-day { font-size: 3.8rem; }
+      .float-chip.one { inset-inline-start: -5px; }
+      .float-chip.two { inset-inline-end: -5px; }
+      .section { padding-top: 34px; }
+      .section-heading { align-items: flex-start; flex-direction: column; }
+      .tool-grid { grid-template-columns: 1fr; }
+      .tool-card { min-height: 260px; padding: 24px; }
+      .tool-page-shell { padding-top: 28px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .panel-head, .panel-body { padding: 20px; }
+      .segmented { width: 100%; }
+      .form-actions .btn { flex: 1 1 140px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+
+    /* ==== SEO content blocks ==== */
+    .content-block { padding: 6px 0 10px; }
+    .prose { max-width: 800px; }
+    .prose h2 { font-size: 1.3rem; margin: 32px 0 12px; }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p { color: var(--muted); margin: 0 0 14px; }
+    .prose ul { color: var(--muted); margin: 0 0 14px; padding-inline-start: 22px; display: grid; gap: 8px; }
+    .prose a { color: var(--primary); text-decoration: underline; }
+    .faq { display: grid; gap: 12px; max-width: 800px; margin-top: 14px; }
+    .faq details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 15px 18px; box-shadow: var(--shadow-sm); }
+    .faq summary { cursor: pointer; font-weight: 700; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; font-size: 1.35rem; color: var(--primary); font-weight: 400; flex-shrink: 0; }
+    .faq details[open] summary::after { content: "\2212"; }
+    .faq details p { color: var(--muted); margin: 10px 0 2px; }
+    .cta-box { margin-top: 34px; background: var(--primary-soft); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 26px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .cta-box strong { font-size: 1.1rem; display: block; }
+    .cta-box p { color: var(--muted); margin: 4px 0 0; }
+    .page-sub { color: var(--muted); margin-top: -6px; }
+    .riyal-mark { font-weight: 700; color: var(--primary); font-size: 1.05rem; }
+    /* ==== centered hero with search ==== */
+    .hero-centered { text-align: center; }
+    .hero-centered .hero-copy { max-width: 660px; margin-inline: auto; }
+    .hero-search { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px; padding-inline-start: 20px; max-width: 520px; margin: 28px auto 0; box-shadow: var(--shadow-sm); transition: border-color .2s, box-shadow .2s; }
+    .hero-search svg { color: var(--muted); flex-shrink: 0; }
+    .hero-search input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; padding: 10px 0; color: var(--text); }
+    .hero-search input:focus { outline: none; }
+    .hero-search input::placeholder { color: var(--muted); }
+    .hero-search:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+    .hero-stats { display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap; }
+    .hero-stat { display: flex; flex-direction: column; gap: 2px; }
+    .hero-stat strong { font-family: "Noto Kufi Arabic", sans-serif; font-size: 1.5rem; color: var(--primary); }
+    .hero-stat span { color: var(--muted); font-size: .85rem; }
+    .no-results { display: none; grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 24px 0; }
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="nav-tools" href="/" aria-label="عدّتي - الرئيسية">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3v3m10-3v3M4 9h16M6.5 5h11A2.5 2.5 0 0 1 20 7.5v10A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-10A2.5 2.5 0 0 1 6.5 5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m9 14 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>عدّتي · أدوات عربية سهلة ومباشرة</span>
+      </a>
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="التنقل الرئيسي">
+        <a class="nav-link" href="/">الرئيسية</a>
+        <a class="nav-link" href="/hijri-converter/">محول التاريخ الهجري</a>
+        <a class="nav-link" href="/iqama-calculator/">حاسبة رسوم الإقامة</a>
+        <a class="nav-link" href="/about/">من نحن</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="pct" class="page active" aria-labelledby="pctTitle">
+      <div class="container tool-page-shell">
+        <div class="breadcrumb"><a href="/">الرئيسية</a><span>/</span><span>حاسبة النسبة المئوية</span></div>
+        <div class="tool-page-header"><h1 id="pctTitle">حاسبة النسبة المئوية</h1><p>احسب النسبة من مبلغ، أو التغير المئوي بين قيمتين — للخصومات والضرائب والعمولات.</p></div>
+        <div class="workspace-grid">
+          <section class="calculator-panel" aria-labelledby="pctHeading">
+            <div class="panel-head"><h2 id="pctHeading">بيانات النسبة</h2></div>
+            <div class="panel-body">
+              <div class="field full" style="margin-bottom:18px">
+                <div class="segmented" role="group" aria-label="نوع الحساب">
+                  <button type="button" id="pctOfBtn" class="active">نسبة من مبلغ</button>
+                  <button type="button" id="pctChangeBtn">التغير المئوي</button>
+                </div>
+              </div>
+              <div class="form-grid" id="pctOfFields">
+                <div class="field"><label for="pctRate">النسبة ٪</label><input id="pctRate" type="number" min="0" step="any" inputmode="decimal" placeholder="مثال: 15" /></div>
+                <div class="field"><label for="pctBase">المبلغ</label><input id="pctBase" type="number" min="0" step="any" inputmode="decimal" placeholder="أدخل القيمة" /></div>
+              </div>
+              <div class="form-grid" id="pctChangeFields" style="display:none">
+                <div class="field"><label for="pctFrom">القيمة الأصلية</label><input id="pctFrom" type="number" step="any" inputmode="decimal" placeholder="أدخل القيمة" /></div>
+                <div class="field"><label for="pctTo">القيمة الجديدة</label><input id="pctTo" type="number" step="any" inputmode="decimal" placeholder="أدخل القيمة" /></div>
+              </div>
+              <div class="form-actions"><button class="btn btn-primary" id="calculatePctBtn">احسب</button><button class="btn btn-secondary" id="resetPctBtn">مسح القيم</button></div>
+              <div class="error-text" id="pctError" role="alert"></div>
+              <div class="result-box" id="pctResult" aria-live="polite">
+                <div class="result-label">النتيجة</div><div class="result-main" id="pctMain"></div><div class="result-sub" id="pctSub"></div>
+              </div>
+            </div>
+          </section>
+          <aside class="info-panel">
+            <h3>متى تستخدمها؟</h3>
+            <ol class="steps"><li>«نسبة من مبلغ»: الخصومات والضرائب والعمولات.</li><li>«التغير المئوي»: نمو الأسعار أو انخفاضها.</li><li>تقبل النسب العشرية مثل 12.5%.</li></ol>
+            <div class="note">النسبة السالبة في التغير المئوي تعني انخفاض القيمة عن الأصل.</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+      <div class="container section content-block">
+        <div class="prose">
+          <h2>كيف تستخدم الحاسبة؟</h2>
+          <p>اختر نوع الحساب: «نسبة من مبلغ» لمعرفة قيمة نسبة معينة من رقم، أو «التغير المئوي» لمعرفة نسبة الارتفاع أو الانخفاض بين قيمتين.</p>
+          <h2>أمثلة سريعة</h2>
+          <p>خصم 20% على سلعة بـ 150 ريال = 30 ريال. ارتفاع سعر من 80 إلى 100 ريال = زيادة 25%. ضريبة 15% على 1000 ريال = 150 ريال.</p>
+          <h2>الدقة</h2>
+          <p>تعرض النتائج حتى منزلتين عشريتين، وتقبل الحاسبة القيم العشرية في المدخلات.</p>
+        </div>
+        <h2 style="margin-top:34px">أسئلة شائعة</h2>
+<div class="faq">
+      <details><summary>كيف أحسب 15% من مبلغ 200؟</summary><p>اختر «نسبة من مبلغ»، أدخل 15 في النسبة و200 في المبلغ — النتيجة 30.</p></details>
+      <details><summary>كيف أحسب نسبة الخصم على سلعة؟</summary><p>استخدم «التغير المئوي»: أدخل السعر الأصلي ثم سعر الخصم، وستظهر نسبة الانخفاض.</p></details>
+      <details><summary>ماذا تعني النسبة السالبة في التغير المئوي؟</summary><p>تعني أن القيمة الجديدة أقل من الأصلية — أي انخفاض بنسبة معروضة.</p></details>
+      <details><summary>هل تدعم الحاسبة النسب العشرية؟</summary><p>نعم، يمكنك إدخال نسب مثل 12.5% أو 7.25% بدقة.</p></details>
+      <details><summary>أين تُستخدم النسبة المئوية عمليًا؟</summary><p>في الخصومات التجارية، وضريبة القيمة المضافة، والعمولات، ونسب الإنجاز والزيادات السنوية.</p></details>
+    </div>
+        <div class="cta-box">
+          <div><strong>جرّب محول الوحدات</strong><p>حوّل بين وحدات الطول والوزن والحرارة.</p></div>
+          <a class="btn btn-primary" href="/unit-converter/">افتح المحول</a>
+        </div>
+      </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
+  </footer>
+  <script>
+    (function () {
+      var menuBtn = document.getElementById('menuBtn');
+      var nav = document.getElementById('navLinks');
+      menuBtn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', String(open));
+      });
+    }());
+
+function setPctMode(isOf) {
+  document.getElementById('pctOfBtn').classList.toggle('active', isOf);
+  document.getElementById('pctChangeBtn').classList.toggle('active', !isOf);
+  document.getElementById('pctOfFields').style.display = isOf ? '' : 'none';
+  document.getElementById('pctChangeFields').style.display = isOf ? 'none' : '';
+  document.getElementById('pctResult').classList.remove('visible');
+}
+document.getElementById('pctOfBtn').addEventListener('click', function () { setPctMode(true); });
+document.getElementById('pctChangeBtn').addEventListener('click', function () { setPctMode(false); });
+function pctNum(id) { var v = Number(document.getElementById(id).value); return Number.isFinite(v) ? v : NaN; }
+document.getElementById('calculatePctBtn').addEventListener('click', function () {
+  var err = document.getElementById('pctError');
+  var isOf = document.getElementById('pctOfBtn').classList.contains('active');
+  var nf = new Intl.NumberFormat('ar-SA', { maximumFractionDigits: 2 });
+  err.classList.remove('visible');
+  if (isOf) {
+    var p = pctNum('pctRate'), b = pctNum('pctBase');
+    if (isNaN(p) || isNaN(b)) { err.textContent = 'أدخل النسبة والمبلغ أولًا.'; err.classList.add('visible'); return; }
+    var r = (p / 100) * b;
+    document.getElementById('pctMain').textContent = nf.format(r);
+    document.getElementById('pctSub').textContent = nf.format(p) + '٪ من ' + nf.format(b) + ' = ' + nf.format(r);
+  } else {
+    var a = pctNum('pctFrom'), c = pctNum('pctTo');
+    if (isNaN(a) || isNaN(c) || a === 0) { err.textContent = 'أدخل القيمتين (الأصلية لا تساوي صفرًا).'; err.classList.add('visible'); return; }
+    var ch = ((c - a) / Math.abs(a)) * 100;
+    var dir = ch > 0 ? 'زيادة' : (ch < 0 ? 'انخفاض' : 'لا تغير');
+    document.getElementById('pctMain').textContent = nf.format(Math.abs(ch)) + '٪ ' + dir;
+    document.getElementById('pctSub').textContent = 'من ' + nf.format(a) + ' إلى ' + nf.format(c);
+  }
+  document.getElementById('pctResult').classList.add('visible');
+});
+document.getElementById('resetPctBtn').addEventListener('click', function () {
+  ['pctRate','pctBase','pctFrom','pctTo'].forEach(function (id) { document.getElementById(id).value = ''; });
+  setPctMode(true);
+  document.getElementById('pctError').classList.remove('visible');
+  document.getElementById('pctResult').classList.remove('visible');
+});
+
+  </script>
+</body>
+</html>
