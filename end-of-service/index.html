@@ -8,7 +8,6 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308796b'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif'%3E%D8%B9%3C/text%3E%3C/svg%3E" />
   <title>حاسبة مكافأة نهاية الخدمة السعودية | عدّتي</title>
   <meta name="description" content="احسب مكافأة نهاية الخدمة حسب المادة 84 من نظام العمل السعودي مع مراعاة حالات الاستقالة. حاسبة عربية مجانية بدون تسجيل." />
-  <meta name="keywords" content="حاسبة مكافأة نهاية الخدمة, نهاية الخدمة, نظام العمل السعودي, حساب مستحقات نهاية الخدمة" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://iddati.pages.dev/end-of-service/" />
   <meta property="og:type" content="website" />
@@ -26,7 +25,6 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="حاسبة مكافأة نهاية الخدمة السعودية | عدّتي" />
-  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://iddati.pages.dev/assets/og/og-tool-end-of-service.png" />
   <meta name="twitter:image:alt" content="حاسبة مكافأة نهاية الخدمة السعودية | عدّتي" />
   <script type="application/ld+json">
@@ -36,7 +34,7 @@
   {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ar", "mainEntity": [{"@type": "Question", "name": "هل تدخل البدلات في الأجر الأخير؟", "acceptedAnswer": {"@type": "Answer", "text": "يُحتسب على الأجر الأخير الشامل؛ أدخل إجمالي أجرك الشهري الأخير بما فيه البدلات الثابتة."}},
 {"@type": "Question", "name": "هل تنطبق القاعدة على العقد محدد المدة؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، القاعدة نفسها في المادة 84 ما لم ينص عقدك على مزايا أفضل للعامل."}},
 {"@type": "Question", "name": "كيف تُحسب مكافأة نهاية الخدمة؟", "acceptedAnswer": {"@type": "Answer", "text": "حسب المادة 84 من نظام العمل: أجر نصف شهر عن كل سنة من السنوات الخمس الأولى، وأجر شهر عن كل سنة تالية، على أساس الأجر الأخير، مع استحقاق نسبي لكسور السنة."}},
-{"@type": "Question", "name": "هل أستحق المكافأة إذا استقلت؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم جزئيًا حسب المادة 85: أقل من سنتين لا يستحق شيئًا، ومن سنتين إلى أقل من خمس سنوات يستحق الثلث، ومن خمس إلى أقل من عشر سنوات يستحق الثلثين، ومن عشر سنوات فأكثر يستحقها كاملة."}},
+{"@type": "Question", "name": "هل أستحق المكافأة إذا استقلت؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم جزئيًا حسب المادة 85: أقل من سنتين لا يستحق شيئًا، ومن سنتين إلى خمس سنوات يستحق الثلث، ومن أكثر من خمس سنوات إلى أقل من عشر سنوات يستحق الثلثين، ومن عشر سنوات فأكثر يستحقها كاملة."}},
 {"@type": "Question", "name": "هل تُحتسب كسور السنة؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، يستحق العامل مكافأة عن أجزاء السنة بنسبة ما قضاه منها في العمل."}},
 {"@type": "Question", "name": "هل نتيجة الحاسبة رسمية؟", "acceptedAnswer": {"@type": "Answer", "text": "لا، النتيجة استرشادية. راجع الموارد البشرية في منشأتك أو مستشارًا قانونيًا للحالات الخاصة."}}]}
   </script>
@@ -493,6 +491,11 @@
     .footer-nav { flex-wrap: wrap; row-gap: 10px; }
     /* ==== blog ==== */
     .post-date { color: var(--muted); font-size: .92rem; margin-bottom: 10px; }
+    .toc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 16px 20px; margin: 20px 0 6px; max-width: 800px; }
+    .toc strong { display: block; margin-bottom: 8px; }
+    .toc ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 6px; }
+    .toc a { color: var(--primary); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
     .article-body h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin: 0 0 18px; max-width: 800px; }
     .article-body .prose h2 { margin-top: 30px; }
     .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
@@ -600,7 +603,7 @@
           <h2>كيف تُحسب المكافأة؟</h2>
           <p>حسب المادة 84 من نظام العمل السعودي: يستحق العامل عند انتهاء علاقة العمل أجر نصف شهر عن كل سنة من السنوات الخمس الأولى، وأجر شهر عن كل سنة من السنوات التالية، ويُتخذ الأجر الأخير أساسًا للحساب.</p>
           <h2>ماذا لو كانت النهاية استقالة؟</h2>
-          <p>تُطبق المادة 85: من استقال قبل إتمام سنتين لا يستحق شيئًا، ومن أمضى سنتين إلى أقل من خمس سنوات يستحق ثلث المكافأة، ومن خمس إلى أقل من عشر سنوات يستحق ثلثيها، ومن بلغ عشر سنوات فأكثر يستحقها كاملة.</p>
+          <p>تُطبق المادة 85: من استقال قبل إتمام سنتين لا يستحق شيئًا، ومن أمضى سنتين إلى خمس سنوات يستحق ثلث المكافأة، ومن أكثر من خمس سنوات إلى أقل من عشر سنوات يستحق ثلثيها، ومن بلغ عشر سنوات فأكثر يستحقها كاملة.</p>
           <h2>تنبيه</h2>
           <p>هذه الحاسبة استرشادية ولا تغني عن الاستشارة القانونية أو مراجعة الموارد البشرية في منشأتك.</p>
         </div>
@@ -609,7 +612,7 @@
       <details><summary>هل تدخل البدلات في الأجر الأخير؟</summary><p>يُحتسب على الأجر الأخير الشامل؛ أدخل إجمالي أجرك الشهري الأخير بما فيه البدلات الثابتة.</p></details>
       <details><summary>هل تنطبق القاعدة على العقد محدد المدة؟</summary><p>نعم، القاعدة نفسها في المادة 84 ما لم ينص عقدك على مزايا أفضل للعامل.</p></details>
       <details><summary>كيف تُحسب مكافأة نهاية الخدمة؟</summary><p>حسب المادة 84 من نظام العمل: أجر نصف شهر عن كل سنة من السنوات الخمس الأولى، وأجر شهر عن كل سنة تالية، على أساس الأجر الأخير، مع استحقاق نسبي لكسور السنة.</p></details>
-      <details><summary>هل أستحق المكافأة إذا استقلت؟</summary><p>نعم جزئيًا حسب المادة 85: أقل من سنتين لا يستحق شيئًا، ومن سنتين إلى أقل من خمس سنوات يستحق الثلث، ومن خمس إلى أقل من عشر سنوات يستحق الثلثين، ومن عشر سنوات فأكثر يستحقها كاملة.</p></details>
+      <details><summary>هل أستحق المكافأة إذا استقلت؟</summary><p>نعم جزئيًا حسب المادة 85: أقل من سنتين لا يستحق شيئًا، ومن سنتين إلى خمس سنوات يستحق الثلث، ومن أكثر من خمس سنوات إلى أقل من عشر سنوات يستحق الثلثين، ومن عشر سنوات فأكثر يستحقها كاملة.</p></details>
       <details><summary>هل تُحتسب كسور السنة؟</summary><p>نعم، يستحق العامل مكافأة عن أجزاء السنة بنسبة ما قضاه منها في العمل.</p></details>
       <details><summary>هل نتيجة الحاسبة رسمية؟</summary><p>لا، النتيجة استرشادية. راجع الموارد البشرية في منشأتك أو مستشارًا قانونيًا للحالات الخاصة.</p></details>
     </div>
@@ -627,12 +630,12 @@
           <p><strong>تنبيه:</strong> النتيجة تقديرية وليست استشارة قانونية؛ الحالات الخاصة (الفصل، العقود محددة المدة) قد تختلف.</p>
           <p class="sources"><strong>مصادر رسمية:</strong> <a href="https://www.hrsd.gov.sa/" rel="noopener" target="_blank">وزارة الموارد البشرية والتنمية الاجتماعية</a></p>
         </div>        <div class="trust-box">
-          <p><strong>دليل مفصّل عن مكافأة نهاية الخدمة:</strong> <a href="/blog/how-to-calculate-end-of-service/">طريقة حساب مكافأة نهاية الخدمة في السعودية خطوة بخطوة</a>.</p>
+          <p><strong>دليل مفصّل عن مكافأة نهاية الخدمة:</strong> <a href="/blog/how-to-calculate-end-of-service/">حساب مكافأة نهاية الخدمة في السعودية</a>.</p>
         </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><a href="/blog/">المدونة</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
+    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><!-- SCAFFOLD:FOOTER --><a href="/blog/">المدونة</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
   </footer>
   <script>
     (function () {
@@ -672,7 +675,7 @@ document.getElementById('calculateEosBtn').addEventListener('click', function ()
   var ratio = 1, ratioText = 'كاملة (100%)';
   if (resign) {
     if (totalYears < 2) { ratio = 0; ratioText = 'لا يستحق — أقل من سنتين'; }
-    else if (totalYears < 5) { ratio = 1 / 3; ratioText = 'الثلث (33%)'; }
+    else if (totalYears <= 5) { ratio = 1 / 3; ratioText = 'الثلث (33%)'; }
     else if (totalYears < 10) { ratio = 2 / 3; ratioText = 'الثلثان (67%)'; }
   }
   var award = full * ratio;
