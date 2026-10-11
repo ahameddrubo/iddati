@@ -8,7 +8,6 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308796b'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif'%3E%D8%B9%3C/text%3E%3C/svg%3E" />
   <title>كيف تحسب نسبة الخصم على أي سلعة؟ — مدونة عدّتي</title>
   <meta name="description" content="شرح بسيط لحساب النسبة المئوية والخصومات: المعادلة، أمثلة عملية، وحساب ضريبة القيمة المضافة 15%." />
-  <meta name="keywords" content="حساب نسبة الخصم, كيف أحسب النسبة المئوية, حساب الضريبة 15, النسبة من مبلغ" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://iddati.pages.dev/blog/how-to-calculate-discount-percentage/" />
   <meta property="og:type" content="website" />
@@ -26,7 +25,6 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="كيف تحسب نسبة الخصم على أي سلعة؟ — مدونة عدّتي" />
-  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://iddati.pages.dev/assets/og/og-post-how-to-calculate-discount-percentage.png" />
   <meta name="twitter:image:alt" content="كيف تحسب نسبة الخصم على أي سلعة؟ — مدونة عدّتي" />
   <script type="application/ld+json">
@@ -492,6 +490,11 @@
     .footer-nav { flex-wrap: wrap; row-gap: 10px; }
     /* ==== blog ==== */
     .post-date { color: var(--muted); font-size: .92rem; margin-bottom: 10px; }
+    .toc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 16px 20px; margin: 20px 0 6px; max-width: 800px; }
+    .toc strong { display: block; margin-bottom: 8px; }
+    .toc ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 6px; }
+    .toc a { color: var(--primary); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
     .article-body h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin: 0 0 18px; max-width: 800px; }
     .article-body .prose h2 { margin-top: 30px; }
     .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
@@ -563,30 +566,31 @@
         <article class="article-body">
           <p class="post-meta">نُشر في 5 أكتوبر 2026 · آخر مراجعة: 5 أكتوبر 2026 · فريق عدّتي</p>
           <h1>كيف تحسب نسبة الخصم على أي سلعة؟</h1>
+<nav class="toc" aria-label="محتويات المقال"><strong>في هذا المقال</strong><ul><li><a href="#sec-1">المعادلة الأساسية</a></li><li><a href="#sec-2">حساب التغير المئوي</a></li><li><a href="#sec-3">ضريبة القيمة المضافة في السعودية</a></li><li><a href="#sec-4">أخطاء شائعة يجب تجنبها</a></li><li><a href="#sec-5">النسبة العكسية: كم كان السعر الأصلي؟</a></li><li><a href="#sec-6">حساب الخصومات المتتالية</a></li><li><a href="#sec-7">ضريبة القيمة المضافة بالتفصيل مع أمثلة</a></li><li><a href="#sec-8">احسب أي نسبة فورًا</a></li></ul></nav>
           <div class="prose">
 
 <p>الخصومات في كل مكان: "خصم 20%"، "ضريبة 15%"... لكن كم تدفع فعليًا؟ معادلة واحدة تحل كل ذلك.</p>
-<h2>المعادلة الأساسية</h2>
+<h2 id="sec-1">المعادلة الأساسية</h2>
 <p>قيمة النسبة = (النسبة ÷ 100) × المبلغ. فخصم 20% على سلعة بـ 150 ريال = (20 ÷ 100) × 150 = <strong>30 ريال</strong>، فتدفع 120 ريال.</p>
-<h2>حساب التغير المئوي</h2>
+<h2 id="sec-2">حساب التغير المئوي</h2>
 <p>لمعرفة نسبة الارتفاع أو الانخفاض بين قيمتين: (الجديد − الأصلي) ÷ الأصلي × 100. فارتفاع سعر من 80 إلى 100 ريال = زيادة <strong>25%</strong>.</p>
-<h2>ضريبة القيمة المضافة في السعودية</h2>
+<h2 id="sec-3">ضريبة القيمة المضافة في السعودية</h2>
 <p>الضريبة 15%: فسلعة بـ 1,000 ريال قبل الضريبة تصبح 1,150 ريال بعدها. لحساب السعر قبل الضريبة اقسم السعر الشامل على 1.15.</p>
-<h2>أخطاء شائعة يجب تجنبها</h2>
+<h2 id="sec-4">أخطاء شائعة يجب تجنبها</h2>
 <p><strong>الخلط بين الخصم والضريبة:</strong> خصم 20% ثم ضريبة 15% لا يساوي 35%؛ فالضريبة تُحسب على السعر بعد الخصم.<br>
 <strong>نسيان القسمة على 100:</strong> 20 × 150 = 3000 (خطأ)، والصحيح (20 ÷ 100) × 150 = 30.<br>
 <strong>حساب النسبة من السعر الخاطئ:</strong> نسبة الخصم تُحسب دائمًا من السعر الأصلي قبل الخصم.</p>
-<h2>النسبة العكسية: كم كان السعر الأصلي؟</h2>
+<h2 id="sec-5">النسبة العكسية: كم كان السعر الأصلي؟</h2>
 <p>إذا دفعت 120 ريال بعد خصم 20%، فالسعر الأصلي = 120 ÷ (1 − 0.20) = 120 ÷ 0.8 = <strong>150 ريال</strong>. هذه الحيلة مفيدة للتحقق من صحة الخصومات المعلنة.</p>
-<h2>حساب الخصومات المتتالية</h2>
+<h2 id="sec-6">حساب الخصومات المتتالية</h2>
 <p>خصم 20% ثم خصم إضافي 10% لا يساوي 30%! فسلعة بـ 200 ريال: بعد الخصم الأول تصبح 160، ثم خصم 10% من 160 = 16، فتدفع <strong>144 ريال</strong> (خصم فعلي 28% لا 30%). احذر العروض التي تجمع الخصومات بهذه الطريقة.</p>
-<h2>ضريبة القيمة المضافة بالتفصيل مع أمثلة</h2>
+<h2 id="sec-7">ضريبة القيمة المضافة بالتفصيل مع أمثلة</h2>
 <p>ضريبة السعودية 15% تُضاف على السعر قبل الضريبة:<br>
 سلعة بـ 200 ريال → الضريبة 30 ريال → تدفع <strong>230 ريال</strong>.<br>
 سلعة بـ 1,500 ريال → الضريبة 225 ريال → تدفع <strong>1,725 ريال</strong>.<br>
 والعكس: سعر شامل 2,300 ريال → قبل الضريبة = 2,300 ÷ 1.15 = <strong>2,000 ريال</strong>.<br>
 انتبه: بعض السلع والخدمات معفاة أو خاضعة لنسب مختلفة حسب اللوائح.</p>
-<h2>احسب أي نسبة فورًا</h2>
+<h2 id="sec-8">احسب أي نسبة فورًا</h2>
 <p>استخدم الحاسبة للنسب من المبالغ أو التغيرات المئوية دون معادلات يدوية.</p>
 
           </div>
@@ -600,7 +604,7 @@
       <details><summary>كيف أحسب السعر قبل ضريبة 15%؟</summary><p>اقسم السعر الشامل على 1.15؛ فـ 1150 ريال شاملة = 1000 ريال قبل الضريبة.</p></details>
     </div>
         <div class="trust-box">
-          <p><strong>مقالات ذات صلة بنفس الموضوع:</strong> <a href="/blog/percentage-of-school-grades/">كيف تحسب النسبة المئوية للدرجات؟ طريقة سهلة للطلاب</a>.</p>
+          <p><strong>مقالات ذات صلة بنفس الموضوع:</strong> <a href="/blog/percentage-of-school-grades/">حساب النسبة المئوية للدرجات: طريقة سهلة للطلاب</a>.</p>
         </div>
         <div class="cta-box">
           <div><strong>جرّب حاسبة النسبة المئوية</strong><p>احسب نتيجتك فورًا ومجانًا وبدون تسجيل.</p></div>
@@ -611,7 +615,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><a href="/blog/">المدونة</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
+    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><!-- SCAFFOLD:FOOTER --><a href="/blog/">المدونة</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
   </footer>
   <script>
     (function () {
