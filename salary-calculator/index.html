@@ -8,7 +8,6 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308796b'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif'%3E%D8%B9%3C/text%3E%3C/svg%3E" />
   <title>حاسبة الراتب السعودي وصافي الراتب | عدّتي</title>
   <meta name="description" content="احسب صافي راتبك الشهري بعد خصم اشتراك التأمينات الاجتماعية للسعوديين وغير السعوديين. حاسبة عربية مجانية بدون تسجيل." />
-  <meta name="keywords" content="حاسبة الراتب السعودي, صافي الراتب, خصم التأمينات الاجتماعية, GOSI, حساب الراتب" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://iddati.pages.dev/salary-calculator/" />
   <meta property="og:type" content="website" />
@@ -26,7 +25,6 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="حاسبة الراتب السعودي وصافي الراتب | عدّتي" />
-  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://iddati.pages.dev/assets/og/og-tool-salary-calculator.png" />
   <meta name="twitter:image:alt" content="حاسبة الراتب السعودي وصافي الراتب | عدّتي" />
   <script type="application/ld+json">
@@ -35,7 +33,8 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ar", "mainEntity": [{"@type": "Question", "name": "هل يشمل الصافي بدل السكن؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، الإجمالي يشمل الراتب الأساسي وبدل السكن والبدلات الأخرى قبل خصم التأمينات."}},
 {"@type": "Question", "name": "متى يُطبق الحد الأعلى 45,000 ريال؟", "acceptedAnswer": {"@type": "Answer", "text": "عندما يتجاوز مجموع (الأساسي + بدل السكن) 45,000 ريال، يُحسب الخصم على 45,000 فقط."}},
-{"@type": "Question", "name": "كم نسبة خصم التأمينات من راتب السعودي؟", "acceptedAnswer": {"@type": "Answer", "text": "9.75% من أجر الاشتراك (الراتب الأساسي + بدل السكن): 9% لفرع التقاعد و0.75% لنظام ساند ضد التعطل عن العمل."}},
+{"@type": "Question", "name": "كم نسبة خصم التأمينات من راتب السعودي؟", "acceptedAnswer": {"@type": "Answer", "text": "9.75% من أجر الاشتراك (الراتب الأساسي + بدل السكن): 9% لفرع التقاعد و0.75% لنظام ساند ضد التعطل عن العمل — وذلك للمشتركين الحاليين (قبل 3 يوليو 2024)."}},
+{"@type": "Question", "name": "ما نسبة الخصم للملتحق الجديد بسوق العمل؟", "acceptedAnswer": {"@type": "Answer", "text": "10.75% حاليًا (منذ يوليو 2026): 10% تقاعد + 0.75% ساند، وتتصاعد سنويًا حتى 11.75% في يوليو 2028 لمن بدأ أول اشتراك بعد 3 يوليو 2024."}},
 {"@type": "Question", "name": "هل يُخصم اشتراك من راتب غير السعودي؟", "acceptedAnswer": {"@type": "Answer", "text": "لا يُخصم من الموظف غير السعودي أي اشتراك؛ يتحمل صاحب العمل 2% عن فرع الأخطار المهنية فقط."}},
 {"@type": "Question", "name": "ما الحد الأعلى لأجر الاشتراك؟", "acceptedAnswer": {"@type": "Answer", "text": "45,000 ريال شهريًا هو الحد الأعلى لأجر الاشتراك في التأمينات الاجتماعية."}},
 {"@type": "Question", "name": "هل تدخل البدلات الأخرى في حساب الخصم؟", "acceptedAnswer": {"@type": "Answer", "text": "لا؛ أجر الاشتراك هو الراتب الأساسي + بدل السكن فقط، بينما تُضاف البدلات الأخرى إلى إجمالي الراتب قبل الخصم."}}]}
@@ -493,6 +492,11 @@
     .footer-nav { flex-wrap: wrap; row-gap: 10px; }
     /* ==== blog ==== */
     .post-date { color: var(--muted); font-size: .92rem; margin-bottom: 10px; }
+    .toc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 16px 20px; margin: 20px 0 6px; max-width: 800px; }
+    .toc strong { display: block; margin-bottom: 8px; }
+    .toc ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 6px; }
+    .toc a { color: var(--primary); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
     .article-body h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); margin: 0 0 18px; max-width: 800px; }
     .article-body .prose h2 { margin-top: 30px; }
     .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
@@ -577,6 +581,13 @@
                     <button type="button" id="natNonSaudi">غير سعودي</button>
                   </div>
                 </div>
+                <div class="field full">
+                  <label>نظام الاشتراك (للسعودي)</label>
+                  <div class="segmented" role="group" aria-label="نظام الاشتراك">
+                    <button type="button" id="regOld" class="active">مشترك قبل 3 يوليو 2024</button>
+                    <button type="button" id="regNew">ملتحق جديد (بعد 3 يوليو 2024)</button>
+                  </div>
+                </div>
               </div>
               <div class="form-actions"><button class="btn btn-primary" id="calculateSalaryBtn">احسب الصافي</button><button class="btn btn-secondary" id="resetSalaryBtn">مسح القيم</button></div>
               <div class="error-text" id="salaryError" role="alert"></div>
@@ -588,7 +599,7 @@
           </section>
           <aside class="info-panel">
             <h3>كيف يُحسب الخصم؟</h3>
-            <ol class="steps"><li>يُحسب اشتراك التأمينات على الراتب الأساسي + بدل السكن.</li><li>للسعودي: 9.75% (تقاعد + ساند) بحد أعلى 45,000 ريال.</li><li>لغير السعودي: لا يُخصم من الموظف.</li></ol>
+            <ol class="steps"><li>يُحسب اشتراك التأمينات على الراتب الأساسي + بدل السكن.</li><li>للسعودي: 9.75% (تقاعد + ساند) بحد أعلى 45,000 ريال.</li><li>للملتحق الجديد (بعد 3 يوليو 2024): 10.75% حاليًا، وتتصاعد سنويًا حتى 11.75% في 2028.</li><li>لغير السعودي: لا يُخصم من الموظف.</li></ol>
             <div class="note">النسب استرشادية حسب الأنظمة الحالية وقد تتغير؛ تحقق من المؤسسة العامة للتأمينات الاجتماعية.</div>
           </aside>
         </div>
@@ -601,6 +612,7 @@
           <p>أدخل الراتب الأساسي وبدل السكن وأي بدلات أخرى، واختر الجنسية (سعودي / غير سعودي)، ثم اضغط «احسب الصافي» لعرض صافي الراتب الشهري مع تفصيل الخصم.</p>
           <h2>نسبة اشتراك التأمينات الاجتماعية</h2>
           <p>يُخصم من الموظف السعودي 9.75% من أجر الاشتراك — 9% لفرع التقاعد و0.75% لنظام ساند — وبحد أعلى للأجر يبلغ 45,000 ريال شهريًا. أما الموظف غير السعودي فلا يُخصم من راتبه اشتراك تأمينات.</p>
+          <p><strong>تنبيه للملتحقين الجدد:</strong> من بدأ أول اشتراك بعد 3 يوليو 2024 يخضع للنظام الجديد (م/273): الخصم حاليًا 10.75% (10% تقاعد + 0.75% ساند) منذ يوليو 2026، ويتصاعد بواقع 0.5% سنويًا حتى 11.75% في يوليو 2028. اختر «ملتحق جديد» في الحاسبة أعلاه لحساب خصمك بدقة.</p>
           <h2>تنبيه</h2>
           <p>النسب والأحكام استرشادية حسب الأنظمة الحالية وقد تتغير؛ تحقق دائمًا من المؤسسة العامة للتأمينات الاجتماعية.</p>
         </div>
@@ -608,7 +620,8 @@
 <div class="faq">
       <details><summary>هل يشمل الصافي بدل السكن؟</summary><p>نعم، الإجمالي يشمل الراتب الأساسي وبدل السكن والبدلات الأخرى قبل خصم التأمينات.</p></details>
       <details><summary>متى يُطبق الحد الأعلى 45,000 ريال؟</summary><p>عندما يتجاوز مجموع (الأساسي + بدل السكن) 45,000 ريال، يُحسب الخصم على 45,000 فقط.</p></details>
-      <details><summary>كم نسبة خصم التأمينات من راتب السعودي؟</summary><p>9.75% من أجر الاشتراك (الراتب الأساسي + بدل السكن): 9% لفرع التقاعد و0.75% لنظام ساند ضد التعطل عن العمل.</p></details>
+      <details><summary>كم نسبة خصم التأمينات من راتب السعودي؟</summary><p>9.75% من أجر الاشتراك (الراتب الأساسي + بدل السكن): 9% لفرع التقاعد و0.75% لنظام ساند ضد التعطل عن العمل — وذلك للمشتركين الحاليين (قبل 3 يوليو 2024).</p></details>
+      <details><summary>ما نسبة الخصم للملتحق الجديد بسوق العمل؟</summary><p>10.75% حاليًا (منذ يوليو 2026): 10% تقاعد + 0.75% ساند، وتتصاعد سنويًا حتى 11.75% في يوليو 2028 لمن بدأ أول اشتراك بعد 3 يوليو 2024.</p></details>
       <details><summary>هل يُخصم اشتراك من راتب غير السعودي؟</summary><p>لا يُخصم من الموظف غير السعودي أي اشتراك؛ يتحمل صاحب العمل 2% عن فرع الأخطار المهنية فقط.</p></details>
       <details><summary>ما الحد الأعلى لأجر الاشتراك؟</summary><p>45,000 ريال شهريًا هو الحد الأعلى لأجر الاشتراك في التأمينات الاجتماعية.</p></details>
       <details><summary>هل تدخل البدلات الأخرى في حساب الخصم؟</summary><p>لا؛ أجر الاشتراك هو الراتب الأساسي + بدل السكن فقط، بينما تُضاف البدلات الأخرى إلى إجمالي الراتب قبل الخصم.</p></details>
@@ -620,19 +633,19 @@
       </div>        <div class="trust-box">
           <h3>منهجية الحساب والمصادر</h3>
           <ul>
-            <li>نسبة اشتراك التأمينات: 9.75% للسعوديين و2% لغير السعوديين (أخطار مهنية)</li>
+            <li>نسبة اشتراك التأمينات: 9.75% للسعوديين المشتركين الحاليين (10.75% للملتحقين الجدد بعد 3 يوليو 2024) و2% لغير السعوديين (أخطار مهنية)</li>
             <li>يُحتسب الاشتراك على الأجر الخاضع بحد أقصى 45,000 ريال شهريًا</li>
             <li>آخر مراجعة للأرقام: 5 أكتوبر 2026</li>
           </ul>
           <p><strong>تنبيه:</strong> النتيجة استرشادية وقد تختلف باختلاف البدلات الخاضعة وغير الخاضعة؛ اعتمد كشف الراتب الرسمي للرقم النهائي.</p>
           <p class="sources"><strong>مصادر رسمية:</strong> <a href="https://www.gosi.gov.sa/ar" rel="noopener" target="_blank">المؤسسة العامة للتأمينات الاجتماعية</a></p>
         </div>        <div class="trust-box">
-          <p><strong>شرحنا حساب الراتب وخصم التأمينات بالتفصيل:</strong> <a href="/blog/gosi-deduction-from-salary/">كم نسبة خصم التأمينات من الراتب السعودي؟ | عدّتي</a>، <a href="/blog/how-to-calculate-retirement-salary/">كيف احسب راتبي التقاعدي؟ شرح مبسط للموظف السعودي</a>.</p>
+          <p><strong>شرحنا حساب الراتب وخصم التأمينات بالتفصيل:</strong> <a href="/blog/gosi-deduction-from-salary/">كم نسبة خصم التأمينات من الراتب السعودي؟</a>، <a href="/blog/how-to-calculate-retirement-salary/">حساب الراتب التقاعدي: شرح مبسط للموظف السعودي</a>.</p>
         </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><a href="/blog/">المدونة</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
+    <div class="container footer-inner"><span>عدّتي · iddati.com</span><div class="footer-nav"><a href="/hijri-converter/">محول التاريخ</a><a href="/iqama-calculator/">رسوم الإقامة</a><a href="/salary-calculator/">حاسبة الراتب</a><a href="/end-of-service/">نهاية الخدمة</a><a href="/age-calculator/">حاسبة العمر</a><a href="/percentage-calculator/">النسبة المئوية</a><a href="/unit-converter/">محول الوحدات</a><a href="/bmi-calculator/">مؤشر الجسم</a><!-- SCAFFOLD:FOOTER --><a href="/blog/">المدونة</a><a href="/about/">من نحن</a><a href="/privacy-policy/">سياسة الخصوصية</a><a href="/contact/">اتصل بنا</a></div></div>
   </footer>
   <script>
     (function () {
@@ -651,6 +664,13 @@ function setNationality(saudi) {
 }
 document.getElementById('natSaudi').addEventListener('click', function () { setNationality(true); });
 document.getElementById('natNonSaudi').addEventListener('click', function () { setNationality(false); });
+function setRegime(isNew) {
+  document.getElementById('regOld').classList.toggle('active', !isNew);
+  document.getElementById('regNew').classList.toggle('active', isNew);
+  document.getElementById('salaryResult').classList.remove('visible');
+}
+document.getElementById('regOld').addEventListener('click', function () { setRegime(false); });
+document.getElementById('regNew').addEventListener('click', function () { setRegime(true); });
 function salaryVal(id) { var v = Number(document.getElementById(id).value); return Number.isFinite(v) && v >= 0 ? v : 0; }
 document.getElementById('calculateSalaryBtn').addEventListener('click', function () {
   var basic = salaryVal('basicSalary');
@@ -665,20 +685,23 @@ document.getElementById('calculateSalaryBtn').addEventListener('click', function
   }
   err.classList.remove('visible');
   var saudi = document.getElementById('natSaudi').classList.contains('active');
+  var isNew = document.getElementById('regNew').classList.contains('active');
+  var rate = isNew ? 0.1075 : 0.0975;
   var gosiBase = Math.min(basic + housing, 45000);
-  var gosi = saudi ? gosiBase * 0.0975 : 0;
+  var gosi = saudi ? gosiBase * rate : 0;
   var gross = basic + housing + other;
   var net = gross - gosi;
   var sar = new Intl.NumberFormat('ar-SA', { style: 'currency', currency: 'SAR', maximumFractionDigits: 2 });
   document.getElementById('salaryGross').textContent = sar.format(gross);
   document.getElementById('salaryGosi').textContent = sar.format(gosi);
   document.getElementById('salaryNet').textContent = sar.format(net);
-  document.getElementById('salarySummary').textContent = saudi ? 'بعد خصم 9.75% تأمينات اجتماعية (تقاعد + ساند)' : 'بدون خصم تأمينات — موظف غير سعودي';
+  document.getElementById('salarySummary').textContent = saudi ? 'بعد خصم ' + (isNew ? '10.75%' : '9.75%') + ' تأمينات اجتماعية (تقاعد + ساند)' + (isNew ? ' — النظام الجديد للملتحقين الجدد' : '') : 'بدون خصم تأمينات — موظف غير سعودي';
   document.getElementById('salaryResult').classList.add('visible');
 });
 document.getElementById('resetSalaryBtn').addEventListener('click', function () {
   ['basicSalary', 'housingAllowance', 'otherAllowances'].forEach(function (id) { document.getElementById(id).value = ''; });
   setNationality(true);
+  setRegime(false);
   document.getElementById('salaryError').classList.remove('visible');
   document.getElementById('salaryResult').classList.remove('visible');
 });
